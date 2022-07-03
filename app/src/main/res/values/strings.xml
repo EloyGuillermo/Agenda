@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="crear_grupo">Crear Grupo</string>
+    <string name="busqueda_Avanzada">Búsqueda Avanzada</string>
+    <string name="item1">Acerca De...</string>
+    <string name="item2">Salir</string>
+</resources>

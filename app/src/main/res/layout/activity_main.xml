@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/botonAñadirGrupo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/grupoTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="6dp"
+        android:text="Grupo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailET" />
+
+    <Button
+        android:id="@+id/botonAvanzada"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#287295"
+        android:onClick="busquedaAvanzada"
+        android:text="Busq Avanz"
+        app:layout_constraintBottom_toTopOf="@+id/botonModificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonGestGrupo"
+        app:layout_constraintTop_toBottomOf="@+id/grupoSpinner" />
+
+    <Button
+        android:id="@+id/botonGestGrupo"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#287295"
+        android:onClick="gestionGrupo"
+        android:text="Grupos"
+        app:layout_constraintBottom_toTopOf="@+id/botonBaja"
+        app:layout_constraintEnd_toStartOf="@+id/botonAvanzada"
+        app:layout_constraintStart_toEndOf="@+id/botonBuscar"
+        app:layout_constraintTop_toBottomOf="@+id/grupoSpinner" />
+
+    <Button
+        android:id="@+id/botonBuscar"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#287295"
+        android:onClick="buscarContacto"
+        android:text="Buscar"
+        app:layout_constraintBottom_toTopOf="@+id/botonAlta"
+        app:layout_constraintEnd_toStartOf="@+id/botonGestGrupo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupoSpinner" />
+
+    <Button
+        android:id="@+id/botonModificar"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="#287295"
+        android:onClick="modificarContacto"
+        android:text="Modificar"
+        app:layout_constraintBottom_toTopOf="@+id/acercaTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonBaja"
+        app:layout_constraintTop_toBottomOf="@+id/botonAvanzada" />
+
+    <Button
+        android:id="@+id/botonBaja"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#287295"
+        android:onClick="eliminarContacto"
+        android:text="Baja"
+        app:layout_constraintBottom_toTopOf="@+id/acercaTV"
+        app:layout_constraintEnd_toStartOf="@+id/botonModificar"
+        app:layout_constraintStart_toEndOf="@+id/botonAlta"
+        app:layout_constraintTop_toBottomOf="@+id/botonGestGrupo" />
+
+    <Button
+        android:id="@+id/botonAlta"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="#287295"
+        android:onClick="altaContacto"
+        android:text="Alta"
+        app:layout_constraintBottom_toTopOf="@+id/acercaTV"
+        app:layout_constraintEnd_toStartOf="@+id/botonBaja"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonBuscar" />
+
+    <EditText
+        android:id="@+id/codigoET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Código"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/nombreET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codigoET"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/apellidosET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreET"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/telefonoET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apellidosET"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/emailET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoET"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Spinner
+        android:id="@+id/grupoSpinner"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailET"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="56dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="308dp"
+        android:onClick="crearGrupo"
+        app:layout_constraintStart_toEndOf="@+id/grupoSpinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/acercaTV"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="34dp"
+        android:background="#46ACA3"
+        android:text="Agenda de contactos Android Studio © Eloy Villadóniga 2021"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/botonAceptar"
+        android:layout_width="103dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="mostrarCopyright"
+        android:text="Aceptar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acercaTV"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
